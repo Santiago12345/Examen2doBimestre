@@ -25,18 +25,19 @@
   <td><h2>Añadir ingredientes a la pizza</h2></td>
   <p>Que ingredientes le gustaria?</p>
 
-  <form action="/Pizza/agregarIngrediente" method="post">
+  <form action="/pizza/createPizza" method="post">
     <input hidden
            type="text"
            name="id">
 
     <div class="btn-group-vertical">
-      <button type="submit" class="btn btn-primary">Pepperoni</button>
-      <button type="submit" class="btn btn-primary">Jamon</button>
-      <button type="submit" class="btn btn-primary">Queso</button>
-      <button type="submit" class="btn btn-primary">Piña</button>
-      <button type="submit" class="btn btn-primary">Carne</button>
-      <button type="submit" class="btn btn-primary">Pollo</button>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Pepperoni</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Jamon</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Queso</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Piña</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Carne</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Pollo</a>
+      <a class="btn btn-medium btn-primary" href="/pizza/agregarIngrediente">Todos</a>
     </div>
   </form>
 

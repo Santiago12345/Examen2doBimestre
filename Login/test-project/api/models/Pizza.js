@@ -8,22 +8,11 @@
 module.exports = {
 
   attributes: {
-    pepperoni: {
-      type: 'string'
+    nombreIngrediente: {
+      type: 'string',
+
     },
-    jamon: {
-      type: 'string'
-    },
-    queso: {
-      type: 'string'
-    },
-    pina: {
-      type: 'string'
-    },
-    carne: {
-      type: 'string'
-    },
-    pollo: {
+    precio: {
       type: 'string'
     }
   }
