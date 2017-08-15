@@ -62,7 +62,7 @@ module.exports = {
     // Find the user from the id passed in via params
     User.findOne(req.param('id'), function foundUser(err, user) {
       if (err) return next(err);
-      if (!user) return next('User doesn\'t exist.');
+      if (!user) return next('Usuario no existe');
 
       res.view({
         user: user
@@ -82,7 +82,7 @@ module.exports = {
     User.findOne(req.param('id'), function foundUser(err, user) {
       if (err) return next(err);
 
-      if (!user) return next('User doesn\'t exist.');
+      if (!user) return next('Usuario no existe');
 
       User.destroy(req.param('id'), function userDestroyed(err) {
         if (err) return next(err);

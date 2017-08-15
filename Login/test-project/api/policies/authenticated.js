@@ -17,7 +17,7 @@ module.exports = function(req, res, ok) {
 
   // user is not allowed
   else {
-    var requireLoginError = [{name: 'requireLogin', message: 'You must be signed in.'}]
+    var requireLoginError = [{name: 'Datos requeridos', message: 'Debe ingresar los datos'}]
     req.session.flash = {
       err: requireLoginError
     }

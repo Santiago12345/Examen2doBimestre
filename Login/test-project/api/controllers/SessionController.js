@@ -22,7 +22,7 @@ module.exports = {
 
       var usernamePasswordRequiredError = [{
         name: 'usernamePasswordRequired',
-        message: 'You must enter both a username and password.'
+        message: 'Debe ingresar todos los campos requeridos'
       }]
 
       // Remember that err is the object being passed down (a.k.a. flash.err), whose value is another object with
@@ -45,7 +45,7 @@ module.exports = {
       if (!user) {
         var noAccountError = [{
           name: 'noAccount',
-          message: 'The email address ' + req.param('email') + ' not found.'
+          message: 'El correo ' + req.param('email') + ' no existe'
         }]
         req.session.flash = {
           err: noAccountError
@@ -62,7 +62,7 @@ module.exports = {
         if (!valid) {
           var usernamePasswordMismatchError = [{
             name: 'usernamePasswordMismatch',
-            message: 'Invalid username and password combination.'
+            message: 'Correo o password incorrectos'
           }]
           req.session.flash = {
             err: usernamePasswordMismatchError
