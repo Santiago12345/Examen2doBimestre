@@ -1,3 +1,15 @@
+<h1>CARRITO</h1>
+
+<% if(typeof arregloIngredientes != 'undefined') {%>
+<h3> Lista arreglo Ingredientes </h3>
+<ul>
+  <% for(var j=0; j< arregloIngredientes.length ;j++){%>
+  <li> Id Usuario: <%=arregloIngredientes[j]%> </li>
+  <% }%>
+</ul>
+<% }%>
+
+
 <div class='container'>
   <h1><%= user.name %> </h1>
   <% if (user.admin) { %>
@@ -7,8 +19,30 @@
   <% } %>
   <h3><%= user.title %> </h3>
   <hr>
-  <h3>contact: <%= user.email %> </h3>
+  <h3>Correo: <%= user.email %> </h3>
 
   <a class="btn btn-medium btn-primary" href="/user/edit/<%= user.id %>">Editar</a>
+  <td><h2>Añadir ingredientes a la pizza</h2></td>
+  <p>Que ingredientes le gustaria?</p>
+
+  <form action="/Pizza/agregarIngrediente" method="post">
+    <input hidden
+           type="text"
+           name="id">
+
+    <div class="btn-group-vertical">
+      <button type="submit" class="btn btn-primary">Pepperoni</button>
+      <button type="submit" class="btn btn-primary">Jamon</button>
+      <button type="submit" class="btn btn-primary">Queso</button>
+      <button type="submit" class="btn btn-primary">Piña</button>
+      <button type="submit" class="btn btn-primary">Carne</button>
+      <button type="submit" class="btn btn-primary">Pollo</button>
+    </div>
+  </form>
+
+
+
 
 </div>
+
+
